@@ -1,0 +1,201 @@
+* 
+	box-sizing: border-box 
+	margin: 0 
+	padding: 0 
+	font-family: Ubuntu 
+	font-style: normal
+
+h1
+	font-family: 'Ubuntu'
+	font-style: normal
+	font-weight: bold
+h4
+	font-family: 'Ubuntu'
+	font-style: normal
+	font-weight: bold
+
+@mixin up()
+	width: 0
+	height: 0
+	border-top-color: transparent
+	border-left: 15px solid transparent
+	border-right: 15px solid transparent
+	border-bottom: 15px solid #474747
+	background-color: transparent
+	cursor: pointer
+
+@mixin down()
+	width: 0
+	height: 0
+	border-top: 15px solid #474747	
+	border-left: 15px solid transparent
+	border-right: 15px solid transparent
+	border-bottom: 15px solid transparent
+	background-color: transparent
+	cursor: pointer
+	
+textarea
+	resize: none
+	border-radius: 5px
+	
+.Wraper
+	background-image: url(./assets/bckimg.jpg)
+	height: 100vh
+	width: 100vw
+	padding: 25px 0 25px 25px
+	display: flex
+.ToDoList
+	
+	width: 578px
+	height: 100%
+	background: #444444
+	mix-blend-mode: normal
+	border: 4px solid rgba(0, 0, 0, 0.5)
+	box-sizing: border-box
+	border-radius: 10px
+	padding: 0 15px
+	h1 
+		text-align: center
+		font-weight: bold
+		font-size: 36px
+		color: #E5E5E5
+	.Note
+		display: flex
+		background: #C4C4C4
+		border: 1px solid #000000
+		box-sizing: border-box
+		border-radius: 5px
+		align-items: row
+		font-size: 11px
+		text-align: center
+		height: 75px
+		position: relative
+		.close
+			position: absolute
+			left: 510px
+			cursor: pointer
+			background-color: transparent
+			font-size: 16px
+			
+		.NoteText
+			padding: 25px 0	
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis
+		.DTbox
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			.L_date
+				font-weight: bold
+				font-size: 11px
+				border-right: 1px solid #000
+				border-bottom:  1px solid #000
+				height: 50%
+				display: flex
+				align-items: center
+				justify-content: center
+				
+			.L_time
+				font-size: 18px
+				font-weight: bold
+				height: 50%
+				display: flex
+				align-items: center
+				border-right: 1px solid #000
+				border-top: 1px solid #000
+				justify-content: center
+.ToDoEdit
+	width: 1324px
+	text-align: center
+	display: flex
+	position: relative
+	h1
+		left: 560px
+		position: absolute
+		font-weight: bold
+		font-size: 48px
+		color: #E5E5E5
+	.TimeDateBlock
+		display: flex
+		margin-top: 12px
+		margin-left: 47px
+		flex-direction: column
+		position: relative
+		.dot
+			width: 18px
+			height: 18px
+			border-radius: 100%
+			background-color: #474747
+			position: absolute
+			left: 73px
+			top: 32px
+			&:nth-child(2n)
+				
+				top: 75px
+		
+		.Time
+			display: flex
+			input
+				box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+				width: 65px
+				height: 77px
+				font-size: 48px
+				margin: 8px 0
+			.hours
+				display: flex
+				flex-direction: column
+				align-items: center
+				.arrow_up
+					@include up
+				.arrow_down
+					@include down
+					
+			.minutes
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-left: 35px
+				.arrow_up
+					@include up
+				.arrow_down
+					@include down
+		.Date
+			display: flex
+			margin-top: 35px
+			h4
+				font-weight: bold
+				font-size: 24px
+				color: #474747
+			textarea
+				box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+				width: 65px
+				height: 77px
+				font-size: 48px
+			.Year
+				textarea
+					width: 120px
+					height: 77px
+			.Day
+				margin: 0 35px
+	.NoteEditor
+		display: flex
+		flex-direction: column
+		align-items: end
+		textarea
+			background: #E5E5E5
+			border: 1px solid rgba(0, 0, 0, 0.68)
+			border-radius: 10px
+			width: 500px
+			height: 248px
+			margin-top: 47px
+			margin-left: 50px
+		.SaveBtn
+			margin-top: 60px
+			width: 176px
+			height: 73px
+			background: linear-gradient(180deg, #728BE7 45.83%, rgba(114, 139, 231, 0.7) 100%)
+			border-radius: 50px
+			font-weight: bold
+			font-size: 48px
+			font-family: Ubuntu

@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.sass';
+import ToDoList from './components/ToDoList';
+import ToDoEdit from './components/ToDoEdit';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Wraper">
+    <ToDoList date="17.02.2022" time="16:34" content="WARNING in ./src/App.sass (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use"/>
+    <ToDoEdit/>
     </div>
   );
 }
